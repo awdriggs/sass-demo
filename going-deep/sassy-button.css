@@ -1,0 +1,38 @@
+header {
+  color: #00004d;
+  text-align: center; }
+  header h1 {
+    font-size: 70px;
+    font-family: "Rochester", cursive; }
+  header h1:hover {
+    color: #c6538c; }
+  header p {
+    font-family: "Open Sans", sans-serif; }
+
+menu {
+  padding: 0;
+  text-align: center; }
+
+.btn-success, .btn-warn, .btn-danger {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border-style: none; }
+
+.btn-success {
+  background-color: #afe74c; }
+  .btn-success:hover {
+    background-color: #7CB518; }
+
+.btn-warn {
+  background-color: #ffcf77; }
+  .btn-warn:hover {
+    background-color: #FFAB11; }
+
+.btn-danger {
+  background-color: #f99985; }
+  .btn-danger:hover {
+    background-color: #F44724; }
+
+/*# sourceMappingURL=sassy-button.css.map */

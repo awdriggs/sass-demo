@@ -1,0 +1,100 @@
+// variables part 2
+
+// colors
+$red: #be252b;
+$orange: #eb761e;
+$white: #fff3d4;
+
+//fonts
+$title: "Creepster", cursive;
+$body: "Open Sans", sans-serif;
+
+// mixins part 3
+@mixin pizza($radius, $size) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+
+  width: $size;
+  height: $size;
+
+  display: block;
+
+  background: {
+    image: url('./assets/pizza.png');
+    position: center;
+  }
+}
+
+//base code
+body {
+  margin: 0;
+  background-color: $white;
+  font-family: $body;
+}
+
+.page-wrap {
+  width: 900px;
+  margin: 0 auto;
+
+  a {
+    color: $red;
+    text-decoration: none;
+  }
+}
+
+//nesting part 1
+#page-head {
+  h1 {
+    font-family: $title;
+    font-size: 70px;
+    letter-spacing: 7px;
+    color: $red;
+    margin: 10px 0 0 0;
+
+    a:hover {
+      color: $orange;
+    }
+  }
+
+  p {
+    margin: 5px 0 0 0;
+    display: inline-block;
+  }
+
+  menu, ul {
+    padding: 0;
+    margin: 0;
+    float: right;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      width: 100px;
+
+      a:hover {
+        background-color: $orange;
+        color: $white;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+main {
+  h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-family: $title;
+  }
+}
+
+.pizza-r-md {
+ @include pizza(100%, 30%);
+  
+}

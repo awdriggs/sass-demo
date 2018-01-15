@@ -1,0 +1,12 @@
+header {
+  color: #00004d;
+  text-align: center; }
+  header h1 {
+    font-size: 70px;
+    font-family: "Rochester", cursive; }
+  header h1:hover {
+    color: #c6538c; }
+  header p {
+    font-family: "Open Sans", sans-serif; }
+
+/*# sourceMappingURL=hello-sass.css.map */

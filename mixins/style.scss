@@ -1,0 +1,79 @@
+// base styles
+body {
+  margin: 0;
+}
+
+main {
+  width: 900px;
+  margin: 0 auto;
+
+  // background-color: blue;
+}
+
+.card {
+  width: 750px;
+  margin: 15px auto;
+  background-color: blue;
+  text-align: center;
+  padding: 25px;
+}
+
+//write mixin here
+@mixin pizza($radius, $size) {
+  border-radius: $radius;
+  width: $size;
+  height: $size;
+}
+
+@mixin sub($length) {
+  width: $length;
+}
+
+%pizza {
+  display: block;
+  margin: 0 auto;
+  background-image: url("./pizza.png");
+  background-position: center;
+  background-size: cover;
+  border: solid 15px orange;
+}
+
+.sub {
+  display: block;
+  margin: 0 auto;
+
+  background-image: url("./sub.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  // width: 500px;
+  height: 250px;
+}
+
+//large round
+.round-lg {
+  @extend %pizza;
+  @include pizza(100%, 500px);
+}
+
+//medium round
+.round-md {
+  @include pizza(100%, 300px);
+}
+
+//square sicilian
+.sicilian {
+  @include pizza(15px, 500px);
+  width: 700px; 
+}
+
+.sub-lg {
+  @include sub(400px);
+   
+}
+
+//.round-sm
+
+//pizza bagel
+
+

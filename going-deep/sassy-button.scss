@@ -1,0 +1,58 @@
+//import the variables from a separate file
+@import 'variables';
+//mixins
+@mixin button-color($color) {
+  background-color: lighten($color, 20%);
+  
+  &:hover {
+    background-color: $color;
+  }
+}
+
+header {
+  color: $base-color;
+  text-align: center;
+
+  h1 {
+    font-size: 70px;
+    font-family: $title-font;
+  }
+
+  h1:hover {
+    color: $highlight;
+  }
+
+  p {
+    font-family: $body-font;
+  }
+
+}
+
+menu {
+  padding: 0;
+  text-align: center;
+}
+ 
+//base border style
+%btn {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.btn-success {
+  @extend %btn;
+  @include button-color($success);
+}
+
+.btn-warn {
+  @extend %btn;
+  @include button-color($warn);
+}
+
+.btn-danger {
+  @extend %btn;
+  @include button-color($danger);
+}

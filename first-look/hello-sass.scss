@@ -1,0 +1,26 @@
+//variables
+$base-color: #00004d;
+$highlight: #c6538c;
+ 
+$body-font: 'Open Sans', sans-serif;
+$title-font: 'Rochester', cursive;
+ 
+header {
+  color: $base-color;
+  text-align: center;
+
+  h1 {
+    font-size: 70px;
+    font-family: $title-font;
+  }
+
+  h1:hover {
+    color: $highlight;
+  }
+   
+  p {
+    font-family: $body-font;
+  }
+}
+
+

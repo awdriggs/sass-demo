@@ -1,0 +1,14 @@
+%center {
+  display: block;
+  margin: 0 auto;
+}
+
+.title-centered {
+  @extend %center;
+  //more properties
+}
+
+.wrapper {
+  @extend %center;
+  //more properties
+}
